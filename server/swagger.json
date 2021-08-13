@@ -1,0 +1,468 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Arive App API",
+        "description": "Find out how your Arive APIs",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:4000",
+    "basePath": "/v1",
+    "tags": [
+        {
+            "name": "Users",
+            "description": "API for users in the system"
+        },
+        {
+            "name": "Hobbies",
+            "description": "API for hobbies in the system"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "List users",
+                "tags": [
+                    "Users"
+                ],
+                "description": "Retrieve users list",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch Users Success",
+                        "schema": {
+                            "$ref": "#/definitions/UserResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create User",
+                "tags": [
+                    "Users"
+                ],
+                "description": "Create User",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/userData"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Created new user successfully!",
+                        "schema": {
+                            "$ref": "#/definitions/UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "409": {
+                        "description": "User who has same name is already existed!"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/users/{userId}": {
+            "get": {
+                "summary": "Get User",
+                "tags": [
+                    "Users"
+                ],
+                "description": "Retrieve User",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/userId"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved User Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/UserResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update User",
+                "tags": [
+                    "Users"
+                ],
+                "description": "Update User",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/userId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/userData"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated User Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "409": {
+                        "description": "User who has same name is already existed!"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove User",
+                "tags": [
+                    "Users"
+                ],
+                "description": "Remove user",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/userId"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Removed User Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/UserResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/hobbies": {
+            "get": {
+                "summary": "List hobbies",
+                "tags": [
+                    "Hobbies"
+                ],
+                "description": "Retrieve hobbies list",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fetch Hobbies Success",
+                        "schema": {
+                            "$ref": "#/definitions/HobbiesResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/hobbies/{userId}": {
+            "post": {
+                "summary": "Create Hobby",
+                "tags": [
+                    "Hobbies"
+                ],
+                "description": "Create Hobby",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/userId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/hobbyData"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Created new hobby successfully!",
+                        "schema": {
+                            "$ref": "#/definitions/HobbyResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/hobbies/{hobbyId}": {
+            "get": {
+                "summary": "Get Hobby",
+                "tags": [
+                    "Hobbies"
+                ],
+                "description": "Retrieve Hobby",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/hobbyId"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved Hobby Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/HobbyResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Hobby",
+                "tags": [
+                    "Hobbies"
+                ],
+                "description": "Update Hobby",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/hobbyId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/hobbyData"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated Hobby Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/HobbyResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Remove Hobby",
+                "tags": [
+                    "Hobbies"
+                ],
+                "description": "Remove Hobby",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/hobbyId"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Removed Hobby Successfully",
+                        "schema": {
+                            "$ref": "#/definitions/HobbyResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "userId": {
+                "in": "path",
+                "name": "userId",
+                "required": true,
+                "description": "User Id",
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "userData": {
+                "in": "body",
+                "name": "hobby",
+                "required": true,
+                "description": "Hobby data",
+                "schema": {
+                    "$ref": "#/definitions/User"
+                }
+            },
+            "hobbyId": {
+                "in": "path",
+                "name": "hobbyId",
+                "required": true,
+                "description": "Hobby Id",
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "hobbyData": {
+                "in": "body",
+                "name": "hobby",
+                "required": true,
+                "description": "Hobby data",
+                "schema": {
+                    "$ref": "#/definitions/Hobby"
+                }
+            }
+        }
+    },
+    "definitions": {
+        "UsersResponse": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/User"
+                    }
+                }
+            }
+        },
+        "UserResponse": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/User"
+                }
+            }
+        },
+        "HobbiesResponse": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Hobby"
+                    }
+                }
+            }
+        },
+        "HobbyResponse": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/Hobby"
+                }
+            }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "hobbies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Hobby"
+                    }
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "Hobby": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "passionLevel": {
+                    "type": "string",
+                    "enum": [
+                        "Low",
+                        "Medium",
+                        "High",
+                        "Very-High"
+                    ]
+                },
+                "year": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "passionLevel",
+                "year"
+            ]
+        }
+    }
+}
