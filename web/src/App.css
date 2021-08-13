@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    overflow: scroll;
+    max-height: 600px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.panel > .footer {
+    width: 100%;
+}
+
+.panel-item {
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 5px;
+}
+
+.panel-item.active {
+    background-color: lavender;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form > .body {
+    flex: 1;
+}
+
+.form > .action {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 250px;
+    padding: 0px 3px;
+}
+
+select,
+input {
+    font-size: 20px;
+}
+
+select[disabled],
+input[disabled] {
+    border: 0px;
+    color: black;
+    background-color: transparent;
+}
+
+select.error,
+input.error {
+    border-color: red;
+}
+
+.button {
+    width: 100px;
+    margin: 2px;
+    padding: 5px 20px;
+    font-size: 20px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.button[disabled] {
+    background: gainsboro !important;
+    cursor: auto;
+}
+
+.button.primary {
+    background: black;
+    color: white;
+}
+
+.button.danger {
+    background: indianred;
+    color: white;
+}
+
+.button.add {
+    width: 100%;
+    margin: 0px;
+    margin-top: 3px;
+}

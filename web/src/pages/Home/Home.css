@@ -1,0 +1,20 @@
+.home-page {
+    padding: 40px;
+}
+
+.home-page > .title {
+    text-align: center;
+    font-size: 60px;
+}
+
+.home-page > .content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.home-page .content > .left,
+.home-page .content > .right {
+    padding: 20px;
+    width: 50%;
+}

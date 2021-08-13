@@ -1,0 +1,85 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ESNext",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "ESNext",
+            "es6",
+            "es5"
+        ],
+        "allowJs": true,
+        "jsx": "react",
+        "isolatedModules": true,
+
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "pretty": true,
+        "skipLibCheck": true,
+        "declaration": false,
+        "noEmit": true,
+        "allowUmdGlobalAccess": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "disableSizeLimit": true,
+        "sourceMap": true,
+
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+
+        "typeRoots": [
+            "./types"
+        ],
+
+        "paths": {
+            "@this/components": [
+                "./src/components"
+            ],
+            "@this/config": [
+                "./src/config"
+            ],
+            "@this/constants": [
+                "./src/constants"
+            ],
+            "@this/forms": [
+                "./src/forms"
+            ],
+            "@this/hooks": [
+                "./src/hooks"
+            ],
+            "@this/mocks": [
+                "./src/mocks"
+            ],
+            "@this/pages": [
+                "./src/pages"
+            ],
+            "@this/services": [
+                "./src/services"
+            ],
+            "@this/utils": [
+                "./src/utils"
+            ],
+            "@this/validators": [
+                "./src/validators"
+            ]
+        }
+    }
+}
