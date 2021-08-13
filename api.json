@@ -1,0 +1,2936 @@
+{
+	"info": {
+		"_postman_id": "73ca7a3b-b2a2-4a44-9015-d8acd41895e6",
+		"name": "Toptal Restaurants Review",
+		"description": "REST API for Toptal Food Delivery Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid Token Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-Cx/ni46CcQzencisy0I/AJgXrjc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:32:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 401,\n    \"message\": \"invalid token\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "418"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a2-pcP1QhoDUjTd6pMZ1qd0RVcJ+uM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:32:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"5ecea0bcda33900850618f02\",\n        \"name\": \"Scott Jackson\",\n        \"email\": \"jackson@teleworm.us\",\n        \"role\": \"client\",\n        \"createdAt\": \"2020-05-27T17:17:48.447Z\"\n    },\n    {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"client\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    },\n    {\n        \"id\": \"5ece9a6b1728f15464f85855\",\n        \"name\": \"Admin User\",\n        \"email\": \"admin@gmail.com\",\n        \"role\": \"admin\",\n        \"createdAt\": \"2020-05-27T16:50:51.669Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/users/5ece9cfc1728f15464f8585b",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"users",
+								"5ece9cfc1728f15464f8585b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/users/5ece9cfc1728f15464f8585b",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users",
+										"5ece9cfc1728f15464f8585b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-HoAKYAm1hWuzuF95CNN1H2m8O6o\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:34:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ece9cfc1728f15464f8585b\",\n    \"name\": \"Anthony Whitt\",\n    \"email\": \"anthony@dayrep.com\",\n    \"role\": \"client\",\n    \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Santos Beber\",\n\t\"email\": \"santos@google.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"owner\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Santos Beber\",\n\t\"password\": \"123456\",\n\t\"role\": \"realtor\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-bdld88bNxzhOaAEhS5g45i2O+Cs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:37:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Validation Error\",\n    \"errors\": [\n        {\n            \"field\": \"email\",\n            \"location\": \"body\",\n            \"messages\": [\n                \"\\\"email\\\" is required\"\n            ],\n            \"types\": [\n                \"any.required\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Create User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Santos Beber\",\n\t\"email\": \"santos@yahoo.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"realtor\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-c2VPcE7zAq6Y3EQ/IoU4BBrJPuw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:36:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea529da33900850618f05\",\n    \"name\": \"Santos Beber\",\n    \"email\": \"santos@yahoo.com\",\n    \"role\": \"realtor\",\n    \"createdAt\": \"2020-05-27T17:36:41.566Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Michael Jackson\",\n\t\"email\": \"santos@yahoo.com\",\n\t\"password\": \"new password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/users/5ecea529da33900850618f05",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"users",
+								"5ecea529da33900850618f05"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Michael Jackson\",\n\t\"email\": \"santos@yahoo.com\",\n\t\"password\": \"new password\",\n\t\"role\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/users/5ecea529da33900850618f05",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users",
+										"5ecea529da33900850618f05"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-6Wf/cd4cbDJyuLI38Z2EGL8w5c0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:39:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea529da33900850618f05\",\n    \"name\": \"Michael Jackson\",\n    \"email\": \"santos@yahoo.com\",\n    \"role\": \"admin\",\n    \"createdAt\": \"2020-05-27T17:36:41.566Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/users/5ecea529da33900850618f05",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"users",
+								"5ecea529da33900850618f05"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User Sucess",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDYzMDcsImlhdCI6MTU5MDYwMDMwNywic3ViIjoiNWVjZTlhNmIxNzI4ZjE1NDY0Zjg1ODU1In0.Q3EAVY6OtrUPNsKWiyiAk9LB706HkAUEzeZhpdRxIuU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/users/5ecea529da33900850618f05",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"users",
+										"5ecea529da33900850618f05"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:39:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get All Restaurants",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2Mjk4MjksImlhdCI6MTYwMjYyMDgyOSwic3ViIjoiNWY4NjBkOWQ1OGUzNTUzZWUwMWQwZDNlIn0.nE2Yp8IdiL9vIAnQbP31hFb_Kj0oVvrsgLIC0oyBSvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants?page=1&perPage=2&query=",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "2"
+								},
+								{
+									"key": "query",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Apartments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "727"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d7-1oqJx2sHfUhnfKxZaI1zrFHjFYI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Green Sunshine\",\n        \"description\": \"Beautiful house\",\n        \"size\": 500,\n        \"price\": 1000,\n        \"rooms\": 4,\n        \"location\": {\n            \"lat\": 47.18827,\n            \"lng\": -119.389034\n        },\n        \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n        \"id\": \"5ecea72dda33900850618f08\"\n    },\n    {\n        \"name\": \"Willowlands\",\n        \"description\": \"Ready for sale\",\n        \"size\": 400,\n        \"price\": 1200,\n        \"rooms\": 6,\n        \"location\": {\n            \"lat\": 47.18235,\n            \"lng\": -116.345634\n        },\n        \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:48:30.326Z\",\n        \"id\": \"5ecea7eeda33900850618f09\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI0ODA1OTgsImlhdCI6MTYwMjQ3NDU5OCwic3ViIjoiNWY4MDg4ODVhOTdmMDQzOGRjNjljYmI5In0.Xzv45cqCXOoOB6GPbyZ-WfNmtMxOBBd5clBK8F1A1Zg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f8089a93887cb46dcdfc723",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f8089a93887cb46dcdfc723"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Apartment Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments/5ecea72dda33900850618f08",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments",
+										"5ecea72dda33900850618f08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19e-L82oOiErG1jBOoIBTlGwUOCkryg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:50:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Green Sunshine\",\n    \"description\": \"Beautiful house\",\n    \"size\": 500,\n    \"price\": 1000,\n    \"rooms\": 4,\n    \"location\": {\n        \"lat\": 47.18827,\n        \"lng\": -119.389034\n    },\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2Mjk4MjksImlhdCI6MTYwMjYyMDgyOSwic3ViIjoiNWY4NjBkOWQ1OGUzNTUzZWUwMWQwZDNlIn0.nE2Yp8IdiL9vIAnQbP31hFb_Kj0oVvrsgLIC0oyBSvk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Pris Restaurant\",\r\n\t\"description\": \"Beverage\",\r\n\t\"location\": \"Paris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Apartment Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Green Sunshine\",\r\n\t\"description\": \"Beautiful house\",\r\n\t\"size\":500,\r\n\t\"price\": 1000, \r\n\t\"rooms\": 4,\r\n    \"location\": {\r\n    \t\"lat\": 47.18827,\r\n    \t\"lng\": -119.389034\r\n    },\r\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19e-L82oOiErG1jBOoIBTlGwUOCkryg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:45:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Green Sunshine\",\n    \"description\": \"Beautiful house\",\n    \"size\": 500,\n    \"price\": 1000,\n    \"rooms\": 4,\n    \"location\": {\n        \"lat\": 47.18827,\n        \"lng\": -119.389034\n    },\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5NTg2MzQsImlhdCI6MTU5NDk1MjYzNCwic3ViIjoiNWYxMTBiM2JhYTE2ZmI0Nzg4NDk0ODZlIn0.GLHK1WY8cICdwkqPpZr-P7Xta7tb0bQAvBRCvl74IzA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f110bccaa16fb4788494871",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f110bccaa16fb4788494871"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Apartment Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments/5ecea72dda33900850618f08",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments",
+										"5ecea72dda33900850618f08"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:53:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxNDMxMDMsImlhdCI6MTU5NDEzNzEwMywic3ViIjoiNWYwNDk3M2NjNTVkMTk2MzJjMzBjN2MxIn0.siFK9I9qSFRcvYcYR_8mnUDhFQBu2J9qxlTQYs2T3jg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Willowlands\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f049cec252fd2059cf44d51",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f049cec252fd2059cf44d51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Apartment Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Willowlands\",\r\n\t\"description\": \"Surrounded by beautiful mountains\",\r\n\t\"size\":800,\r\n\t\"price\": 1200, \r\n\t\"rooms\": 6,\r\n    \"location\": {\r\n    \t\"lat\": 47.18235,\r\n    \t\"lng\": -116.345634\r\n    },\r\n    \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/apartments/5ecea72dda33900850618f08",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments",
+										"5ecea72dda33900850618f08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-aNqVF6MzSplkxMhLNyVwaDpIRGY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:52:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Willowlands\",\n    \"description\": \"Surrounded by beautiful mountains\",\n    \"size\": 800,\n    \"price\": 1200,\n    \"rooms\": 6,\n    \"location\": {\n        \"lat\": 47.18235,\n        \"lng\": -116.345634\n    },\n    \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ab85334-c332-42e2-954f-30b154e7e5c1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "417f95d4-0337-4e74-96c6-fde2290d3028",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Reply",
+					"item": [
+						{
+							"name": "Create Reply",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2MzAxOTcsImlhdCI6MTYwMjYyMTE5Nywic3ViIjoiNWY4NGFmZTVjZWNjNmE0M2ZjY2ZkMzM4In0.g_8yoVnlSgsU7lZYy25dUqBvwWrswDdK825g5_FZXGI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reply\": \"Thank you for your good review.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/v1/reviews/5f860f7558e3553ee01d0d41/reply",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"v1",
+										"reviews",
+										"5f860f7558e3553ee01d0d41",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Reply",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2MzAxOTcsImlhdCI6MTYwMjYyMTE5Nywic3ViIjoiNWY4NGFmZTVjZWNjNmE0M2ZjY2ZkMzM4In0.g_8yoVnlSgsU7lZYy25dUqBvwWrswDdK825g5_FZXGI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reply\": \"WOW.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/v1/reviews/5f860f7558e3553ee01d0d41/reply",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"v1",
+										"reviews",
+										"5f860f7558e3553ee01d0d41",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Reply",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2MzAxOTcsImlhdCI6MTYwMjYyMTE5Nywic3ViIjoiNWY4NGFmZTVjZWNjNmE0M2ZjY2ZkMzM4In0.g_8yoVnlSgsU7lZYy25dUqBvwWrswDdK825g5_FZXGI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:4000/v1/reviews/5f860f7558e3553ee01d0d41/reply",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"v1",
+										"reviews",
+										"5f860f7558e3553ee01d0d41",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get All Reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI1MDMyMDcsImlhdCI6MTYwMjQ5NzIwNywic3ViIjoiNWY4MDg4ODVhOTdmMDQzOGRjNjljYmI5In0.Poy3ox0erRtJwQ_P95NJa-qIJw-QKzFy2UUP7PkEkNM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/reviews?page=1&perPage=2&status=1&rate=5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "2"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "rate",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Apartments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "727"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d7-1oqJx2sHfUhnfKxZaI1zrFHjFYI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Green Sunshine\",\n        \"description\": \"Beautiful house\",\n        \"size\": 500,\n        \"price\": 1000,\n        \"rooms\": 4,\n        \"location\": {\n            \"lat\": 47.18827,\n            \"lng\": -119.389034\n        },\n        \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n        \"id\": \"5ecea72dda33900850618f08\"\n    },\n    {\n        \"name\": \"Willowlands\",\n        \"description\": \"Ready for sale\",\n        \"size\": 400,\n        \"price\": 1200,\n        \"rooms\": 6,\n        \"location\": {\n            \"lat\": 47.18235,\n            \"lng\": -116.345634\n        },\n        \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:48:30.326Z\",\n        \"id\": \"5ecea7eeda33900850618f09\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Reviews for Restaurant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2Mjk4MjksImlhdCI6MTYwMjYyMDgyOSwic3ViIjoiNWY4NjBkOWQ1OGUzNTUzZWUwMWQwZDNlIn0.nE2Yp8IdiL9vIAnQbP31hFb_Kj0oVvrsgLIC0oyBSvk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f85c38a0b5d0b0c886f972b/reviews",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f85c38a0b5d0b0c886f972b",
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Apartments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "727"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d7-1oqJx2sHfUhnfKxZaI1zrFHjFYI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Green Sunshine\",\n        \"description\": \"Beautiful house\",\n        \"size\": 500,\n        \"price\": 1000,\n        \"rooms\": 4,\n        \"location\": {\n            \"lat\": 47.18827,\n            \"lng\": -119.389034\n        },\n        \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n        \"id\": \"5ecea72dda33900850618f08\"\n    },\n    {\n        \"name\": \"Willowlands\",\n        \"description\": \"Ready for sale\",\n        \"size\": 400,\n        \"price\": 1200,\n        \"rooms\": 6,\n        \"location\": {\n            \"lat\": 47.18235,\n            \"lng\": -116.345634\n        },\n        \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:48:30.326Z\",\n        \"id\": \"5ecea7eeda33900850618f09\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Pending Reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2MzAxOTcsImlhdCI6MTYwMjYyMTE5Nywic3ViIjoiNWY4NGFmZTVjZWNjNmE0M2ZjY2ZkMzM4In0.g_8yoVnlSgsU7lZYy25dUqBvwWrswDdK825g5_FZXGI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/reviews/pending",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"reviews",
+								"pending"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Apartments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "727"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d7-1oqJx2sHfUhnfKxZaI1zrFHjFYI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Green Sunshine\",\n        \"description\": \"Beautiful house\",\n        \"size\": 500,\n        \"price\": 1000,\n        \"rooms\": 4,\n        \"location\": {\n            \"lat\": 47.18827,\n            \"lng\": -119.389034\n        },\n        \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n        \"id\": \"5ecea72dda33900850618f08\"\n    },\n    {\n        \"name\": \"Willowlands\",\n        \"description\": \"Ready for sale\",\n        \"size\": 400,\n        \"price\": 1200,\n        \"rooms\": 6,\n        \"location\": {\n            \"lat\": 47.18235,\n            \"lng\": -116.345634\n        },\n        \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n        \"realtor\": {\n            \"name\": \"Anthony Whitt\",\n            \"email\": \"anthony@dayrep.com\",\n            \"id\": \"5ece9cfc1728f15464f8585b\"\n        },\n        \"createdAt\": \"2020-05-27T17:48:30.326Z\",\n        \"id\": \"5ecea7eeda33900850618f09\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Review",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI1MDMyMDcsImlhdCI6MTYwMjQ5NzIwNywic3ViIjoiNWY4MDg4ODVhOTdmMDQzOGRjNjljYmI5In0.Poy3ox0erRtJwQ_P95NJa-qIJw-QKzFy2UUP7PkEkNM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/v1/reviews/5f80ab9cd150a70bc03e50f1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"reviews",
+								"5f80ab9cd150a70bc03e50f1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Apartment Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/v1/apartments/5ecea72dda33900850618f08",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments",
+										"5ecea72dda33900850618f08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19e-L82oOiErG1jBOoIBTlGwUOCkryg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:50:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Green Sunshine\",\n    \"description\": \"Beautiful house\",\n    \"size\": 500,\n    \"price\": 1000,\n    \"rooms\": 4,\n    \"location\": {\n        \"lat\": 47.18827,\n        \"lng\": -119.389034\n    },\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Review",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDI2Mjk4MjksImlhdCI6MTYwMjYyMDgyOSwic3ViIjoiNWY4NjBkOWQ1OGUzNTUzZWUwMWQwZDNlIn0.nE2Yp8IdiL9vIAnQbP31hFb_Kj0oVvrsgLIC0oyBSvk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"rate\": 3,\r\n    \"visitDate\": \"2020/10/03\",\r\n    \"comment\": \"I recomment this restaurant\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f85c38a0b5d0b0c886f972b/reviews",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f85c38a0b5d0b0c886f972b",
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Apartment Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Green Sunshine\",\r\n\t\"description\": \"Beautiful house\",\r\n\t\"size\":500,\r\n\t\"price\": 1000, \r\n\t\"rooms\": 4,\r\n    \"location\": {\r\n    \t\"lat\": 47.18827,\r\n    \t\"lng\": -119.389034\r\n    },\r\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/apartments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19e-L82oOiErG1jBOoIBTlGwUOCkryg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:45:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Green Sunshine\",\n    \"description\": \"Beautiful house\",\n    \"size\": 500,\n    \"price\": 1000,\n    \"rooms\": 4,\n    \"location\": {\n        \"lat\": 47.18827,\n        \"lng\": -119.389034\n    },\n    \"address\": \"5JQ7+87 Moses Lake North, Washington, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxNDMxMDMsImlhdCI6MTU5NDEzNzEwMywic3ViIjoiNWYwNDk3M2NjNTVkMTk2MzJjMzBjN2MxIn0.siFK9I9qSFRcvYcYR_8mnUDhFQBu2J9qxlTQYs2T3jg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Willowlands\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/v1/restaurants/5f049cec252fd2059cf44d51",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"v1",
+								"restaurants",
+								"5f049cec252fd2059cf44d51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Apartment Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDcyNjgsImlhdCI6MTU5MDYwMTI2OCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.1xcyZjRiQhlvHjSaBhhw8gVzswcMsNcBJEsGGmHJmvc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Willowlands\",\r\n\t\"description\": \"Surrounded by beautiful mountains\",\r\n\t\"size\":800,\r\n\t\"price\": 1200, \r\n\t\"rooms\": 6,\r\n    \"location\": {\r\n    \t\"lat\": 47.18235,\r\n    \t\"lng\": -116.345634\r\n    },\r\n    \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/apartments/5ecea72dda33900850618f08",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"apartments",
+										"5ecea72dda33900850618f08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-aNqVF6MzSplkxMhLNyVwaDpIRGY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 May 2020 17:52:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5ecea72dda33900850618f08\",\n    \"name\": \"Willowlands\",\n    \"description\": \"Surrounded by beautiful mountains\",\n    \"size\": 800,\n    \"price\": 1200,\n    \"rooms\": 6,\n    \"location\": {\n        \"lat\": 47.18235,\n        \"lng\": -116.345634\n    },\n    \"address\": \"10300-10498 Hinderhill Dr, Bakersfield, CA 93312, USA\",\n    \"createdAt\": \"2020-05-27T17:45:17.023Z\",\n    \"realtor\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"realtor\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bf7cb0c4-35cb-4253-ae7f-77099e88eda8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1b4ac2a-adc6-445a-8367-a9a29eed2327",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Kenta Milios\",\n    \"email\": \"kenta@gmail.com\",\n    \"password\": \"123456\",\n    \"role\": \"regular\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Anthony Whitt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-Jh5h1rliym5N2ArhdwWXtK0JYTQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:06:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Validation Error\",\n    \"errors\": [\n        {\n            \"field\": \"email\",\n            \"location\": \"body\",\n            \"messages\": [\n                \"\\\"email\\\" is required\"\n            ],\n            \"types\": [\n                \"any.required\"\n            ]\n        },\n        {\n            \"field\": \"password\",\n            \"location\": \"body\",\n            \"messages\": [\n                \"\\\"password\\\" is required\"\n            ],\n            \"types\": [\n                \"any.required\"\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Anthony Whitt\",\n    \"email\": \"anthony@dayrep.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "510"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1fe-eSgJjvl1g2rWE0FhXtJ1sCPpz8Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:01:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": {\n        \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDQ5MDgsImlhdCI6MTU5MDU5ODkwOCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.Wk6Gsnm0IF9YI-HZyCqHZHP85RwKvVqHpphU-xbVUZU\",\n        \"refreshToken\": \"5ece9cfc1728f15464f8585b.e934961b3f24c93b3fd1d67f2677d994601b4d860004d1435a22dddda271f3111bf968cbff729b67\",\n        \"expiresIn\": \"2020-05-27T18:41:48.830Z\"\n    },\n    \"user\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"client\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+				},
+				{
+					"name": "Duplicate Email Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Anthony Whitt\",\n    \"email\": \"duplicate@dayrep.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"register"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "136"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"88-3Pu8bWDKA2TyP9EpsQ9vnMACs8s\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:05:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 409,\n    \"message\": \"\\\"email\\\" already exists\",\n    \"errors\": [\n        {\n            \"field\": \"email\",\n            \"location\": \"body\",\n            \"messages\": [\n                \"\\\"email\\\" already exists\"\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"govil@google.com\",\n\t\"refreshToken\": \"5f6cdcb882494f36fc6a9a2f.fbd719fe11c2841abf2424ccd16c8aa51815b1ee7dbae4a4ac1df9166f0b7349af0261f37f7b6802\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/refresh-token",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"refresh-token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"anthony@dayrep.com\",\n\t\"refreshToken\": \"5ece9cfc1728f15464f8585b.75253fb414c6be9125b70fe577eb2cf55f748e23a4633f7324980b3039a2e4da54dbaaa36286d038\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/refresh-token",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"refresh-token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "352"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"160-iXFCdR6AW/+tUa1gst3U2Alr2Nk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:14:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDU2ODAsImlhdCI6MTU5MDU5OTY4MCwic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.KMPlajNOKL6tj-ZMrrdaTdduJbDyb1Ctqm4p3IVmvHM\",\n    \"refreshToken\": \"5ece9cfc1728f15464f8585b.3440d8d7694408232e22f5a1e5f51534ef70082e8b0b8b7007330810f63bc4ed61e041a86c398911\",\n    \"expiresIn\": \"2020-05-27T18:54:40.061Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wrong Email or Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"anthony@dayrep.com\",\n\t\"password\": \"wrong password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-N28IwKB3We4cL8nLP6y9XNOSKyY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:12:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"message\": \"Incorrect email or password\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"anthony@dayrep.com\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "510"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1fe-gKFYt7bBpk4/eatcktkaKVbbdHU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 May 2020 17:12:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": {\n        \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTA2MDU1NDMsImlhdCI6MTU5MDU5OTU0Mywic3ViIjoiNWVjZTljZmMxNzI4ZjE1NDY0Zjg1ODViIn0.2EgjV-1HNhFy8jeJym7J9XqI8ZX1r6QILGLAJS94md4\",\n        \"refreshToken\": \"5ece9cfc1728f15464f8585b.342cd8292c0aa3cf00e944332709a342b969698e0fc7ed89b370e38564dbb1ccdcf18bf8ef8ca07a\",\n        \"expiresIn\": \"2020-05-27T18:52:23.497Z\"\n    },\n    \"user\": {\n        \"id\": \"5ece9cfc1728f15464f8585b\",\n        \"name\": \"Anthony Whitt\",\n        \"email\": \"anthony@dayrep.com\",\n        \"role\": \"client\",\n        \"createdAt\": \"2020-05-27T17:01:48.739Z\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9afa41dd-b70c-4fd0-b8c3-28e7df624c15",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3841bf5c-1036-4473-b96e-6159a259a90e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
